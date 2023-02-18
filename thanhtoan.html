@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Thần số học Vitus - tường mệnh số, vận thành công">
+    <meta name="keywords" content="Vitus, thần số, vận mệnh, đường đời">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="img/services/vitus-logo.png">
+    <title>Vitus</title>
+
+    <link rel="stylesheet" href="lib/twitter-bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/font.css" type="text/css">
+    <link rel="stylesheet" href="lib/owl-carousel/owl.carousel.min.css" type="text/css">
+
+    <link rel="stylesheet" href="lib/jquery-nice-select/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="lib/SlickNav/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="lib/jquery-autocomplete/jquery.auto-complete.min.css" type="text/css">
+    <link rel="stylesheet" href="lib/aos/aos.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/site.css" type="text/css">
+    <link rel="stylesheet" href="css/bganimate.css" type="text/css">
+    <script src="assets/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RJT4YPPHY5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RJT4YPPHY5');
+    </script>
+</head>
+
+<body>
+
+    <div id="top"></div>
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="canvas-open">
+        <div class="logo d-flex align-items-center">
+            <span style="color: #f5deb3; font-weight: bold; margin: 0; font-size: 18px;">VITUS</span>
+        </div>
+
+        <div class="bar-right d-flex">
+            <a class="btn btn-sm btn-danger mr-1" href="index.html">Trang chủ</a>
+            <a class="btn btn-sm btn-danger mr-1" href="index.html#sanpham">Sản phẩm</a>
+            <a class="btn btn-sm btn-danger" href="Expert.html">Liên hệ</a>
+        </div>
+    </div>
+
+    <!-- Offcanvas Menu Section End -->
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between">
+                        <ul class="tn-left">
+                            <li><a href="index.html"><i class="icon_house_alt"></i> TRANG CHỦ</a></li>
+                            <li class="dropdown">
+                                <a href="index.html#sanpham" class="" aria-haspopup="true" aria-expanded="false"> SẢN PHẨM</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="Expert.html" class="" aria-haspopup="true" aria-expanded="false"> Liên hệ</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="index.html#truyenthong" class="" aria-haspopup="true" aria-expanded="false"> Cộng đồng</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="ungdung.html" class="" aria-haspopup="true" aria-expanded="false"> Ứng dụng</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Hero Section Begin -->
+    <section class="hero-section" style="">
+        <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="2816" height="7372"></canvas></div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero-text">
+                        <img src="img/services/logo.png" style="width: 180px;" alt="">
+                        <h1 class="shadow-sm">Tường mệnh số, vận thành công</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5 text-light" id="thanhtoan">
+                <div class="col-md-12  text-center mb-2 pt-5">
+                    <h3 class="text-while text-uppercase shadow-sm">THanh toán</h3>
+                </div>
+                <div class="col-md-12   mb-4 pt-3 ">
+                    <div class="table-responsive">
+                        <form action="ajaxServlet" id="frmCreateOrder" method="post">
+                            <div class="form-group">
+                                <label style="font-size: 25px;font-weight: bold ;" for="language">Hình thức thanh toán </label>
+                                <select style="border: 2px solid rgb(8, 8, 8);" name="ordertype" id="ordertype" class="form-control bg-white text-body">
+                                       
+                                        <option value="billpayment">Thanh toán hóa đơn</option>
+                                       
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount" style="font-size: 25px;font-weight: bold ;">Số tiền</label>
+                                <input style="border: 2px solid rgb(8, 8, 8);" class="form-control bg-white text-body" data-val="true" data-val-number="The field Amount must be a number." data-val-required="The Amount field is required." id="amount" max="100000000" min="70000" name="amount"
+                                    type="number" value="70000" />
+                            </div>
+                            <div class="form-group">
+                                <label for="OrderDescription" style="font-size: 25px;font-weight: bold ;">Nội dung thanh toán</label>
+                                <textarea style="border: 2px solid rgb(8, 8, 8);" class="form-control bg-white text-body" cols="20" id="vnp_OrderInfo" name="vnp_OrderInfo" rows="5" placeholder="Vui lòng nhập email của bạn!!" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="bankcode" style="font-size: 25px;font-weight: bold ;">Ngân hàng</label>
+                                <select style="border: 2px solid rgb(8, 8, 8);" name="bankcode" id="bankcode" class="form-control bg-white text-body">
+                                        <option value="">Không chọn </option>
+                                        <option value="VNPAYQR">VNPAYQR</option>
+                                        <option value="MBAPP">MBAPP</option>
+                                        <option value= "INTCARD">INTCARD</option>
+                                        <option value= "VNBANK">VNBANK</option>
+                                        <option value= "VNPAYEWALLET">VNPAYEWALLET</option> 
+                                        <option value="NCB">  	Ngân hàng NCB</option>
+                                        <option value="SACOMBANK">Ngân hàng Sacombank  </option>
+                                        <option value="EXIMBANK"> 	Ngân hàng Eximbank </option>
+                                        <option value="MSBANK"> 	Ngân hàng MSBANK </option>
+                                        <option value="NAMABANK"> 	Ngân hàng NamABank </option>
+                                        <option value="VISA">  	Thanh toán qua VISA/MASTER</option>
+                                        <option value="VNMART">  	Ví điện tử VnMart</option>
+                                        <option value="VIETINBANK">Ngân hàng Vietinbank  </option>
+                                        <option value="VIETCOMBANK"> 	Ngân hàng VCB </option>
+                                        <option value="HDBANK">Ngân hàng HDBank</option>
+                                        <option value="DONGABANK">  	Ngân hàng Đông Á</option>
+                                        <option value="TPBANK"> 	Ngân hàng TPBank </option>
+                                        <option value="OJB">  	Ngân hàng OceanBank</option>
+                                        <option value="BIDV"> Ngân hàng BIDV </option>
+                                        <option value="TECHCOMBANK"> 	Ngân hàng Techcombank </option>
+                                        <option value="VPBANK"> 	Ngân hàng VPBank </option>
+                                        <option value="AGRIBANK"> 	Ngân hàng Agribank </option>
+                                        <option value="MBBANK"> 	Ngân hàng MBBank </option>
+                                        <option value="ACB"> Ngân hàng ACB </option>
+                                        <option value="OCB"> Ngân hàng OCB </option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="language" style="font-size: 25px;font-weight: bold ;">Ngôn ngữ</label>
+                                <select style="border: 2px solid rgb(8, 8, 8);" name="language" id="language" class="form-control bg-white text-body">
+                                        <option value="vn">Tiếng Việt</option>
+                                        <option value="en">English</option>
+                                    </select>
+                            </div>
+                            <button type="submit" class="btn btn-default btn-success btn-lg">Thanh toán</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <link href="https://pay.vnpay.vn/lib/vnpay/vnpay.css" rel="stylesheet" />
+    <script src="https://pay.vnpay.vn/lib/vnpay/vnpay.min.js"></script>
+    <script type="text/javascript">
+        $("#frmCreateOrder").submit(function() {
+            var postData = $("#frmCreateOrder").serialize();
+            var submitUrl = $("#frmCreateOrder").attr("action");
+            $.ajax({
+                type: "POST",
+                url: submitUrl,
+                data: postData,
+                dataType: 'JSON',
+                success: function(x) {
+                    if (x.code === '00') {
+                        if (window.vnpay) {
+                            vnpay.open({
+                                width: 768,
+                                height: 600,
+                                url: x.data
+                            });
+                        } else {
+                            location.href = x.data;
+                        }
+                        return false;
+                    } else {
+                        alert(x.Message);
+                    }
+                }
+            });
+            return false;
+        });
+    </script>
+    <div class="modal fade" id="exclamationModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-info" id="exampleModalLongTitle">Vitus thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Vui lòng liên hệ với chúng tôi để giải đáp thắc mắc: </p>
+                    <p>
+                        <a href="https://m.me/100018451339470"> <img src="img/services/messenger.png" style="height: 24px;">Messenger</a>
+                    </p>
+                    <p>
+                        <a href="tel:0375536211"> <img src="img/services/phone-icon.png" style="height: 24px;"> 0375 536 211</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="taiapptieptuc" tabindex="-1" role="dialog" aria-labelledby="modalRollDice" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="exampleModalLabel">Vitus thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bạn cần tải app để tiếp tục và xem đầy đủ các tính năng!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Quay lại</button>
+                    <a href="#" target="_blank" class="btn btn-primary">Tải app</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="muagoi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">Thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Bạn cần mua gói sản phẩm để tiếp tục!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Quay lại</button>
+                    <a href="chitiet70k.html" target="_blank" class="btn btn-primary">Xem gói 70K</a>
+                    <a href="chitiet350k.html" target="_blank" class="btn btn-primary">Xem gói 350k</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section" id="footer">
+        <img class="footer-logo" src="img/services/logo-khong-nen.png" alt="">
+        <div class="container">
+            <div class="footer-text">
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="ft-contact">
+                            <h6>Liên hệ</h6>
+                            <ul>
+                                <li class="text-bold text-white">Công ty Cổ phần Đầu tư Quốc tế VITUS</li>
+                                <li class="text-bold text-white">Viện nghiên cứu và Ứng dụng Số học Pythagoras</li>
+
+                                <li><i class="icon_pin_alt"></i> Tòa nhà Vitus Số 2, Ngõ 27 Huỳnh Thúc Kháng, Quận Đống Đa, TP. Hà Nội </li>
+                                <li><i class="icon_mobile"></i>0375 536 211</li>
+                                <li><i class="icon_globe-2"></i> <a href="index.html"> www.vitus.vn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="ft-newslatter">
+                            <h6>Đăng ký tư vấn</h6>
+                            <p>
+                                Nhận thông tin mới nhất của Vitus <br> Vui lòng nhập số điện thoại vào ô dưới đây.
+                            </p>
+                            <form id="fn-form-subcrible" action="#" class="fn-form mb-5">
+                                <input type="text" name="phone" id="phone" placeholder="Số điện thoại">
+                                <button type="submit"><i class="icon_check"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="ft-contact ">
+                            <h6><a href="index.html" class="text-light ">Trang chủ</a></h6>
+                            <h6><a href="index.html#sanpham" class="text-light">Sản phẩm</a></h6>
+                            <h6><a href="Expert.html" class="text-light">Liên hệ</a></h6>
+                            <h6><a href="ungdung.html" class="text-light">Ứng dụng </a></h6>
+                            <h6><a href="index.html#truyenthong" class="text-light">Cộng đồng</a></h6>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-option">
+            <div class="container text-center text-dark">
+
+                <p>
+                    Copyright ©
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> Vitus team. All rights reserved
+                </p>
+
+            </div>
+        </div>
+        <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;"><i class="arrow_carrot-up"></i></a>
+    </footer>
+    <!-- Footer Section End -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Tìm kiếm...">
+            </form>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/popper.js/umd/popper.js"></script>
+    <script src="lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="lib/SlickNav/jquery.slicknav.js"></script>
+    <script src="lib/owl-carousel/owl.carousel.js"></script>
+    <script src="lib/scrollup/jquery.scrollUp.min.js"></script>
+    <script src="lib/aos/aos.js"></script>
+    <script src="js/main.js?v4"></script>
+    <script src="https://cldup.com/S6Ptkwu_qA.js"></script>
+    <script src="js/bganimate.js"></script>
+
+    <script src="lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function() {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function(msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function() {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function(msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+
+
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function() {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function(msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
+
+</html>
